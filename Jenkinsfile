@@ -15,7 +15,7 @@ pipeline {
             steps {
                 rtServer (
                     id: "ARTIFACTORY_SERVER",
-                    url: SERVER_URL,
+                    url: 'http://mayursecurityclass.jfrog.io/artifactory',
                     credentialsId: CREDENTIALS
                 )
 
@@ -38,7 +38,7 @@ pipeline {
         stage ('Exec Maven') {
             steps {
                 rtMavenRun (
-                    tool: MAVEN_TOOL, // Tool name from Jenkins configuration
+                    tool: Maven_3_5, // Tool name from Jenkins configuration
                     pom: 'maven-examples/maven-example/pom.xml',
                     goals: 'clean install -U',
                     deployerId: "MAVEN_DEPLOYER",
