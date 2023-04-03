@@ -39,7 +39,7 @@ pipeline {
             steps {
                 rtMavenRun (
                     tool: Maven_3_5, // Tool name from Jenkins configuration
-                    pom: 'maven-examples/maven-example/pom.xml',
+                    pom: 'https://github.com/mayur189/devsecops-jenkins-k8s-tf-sast-sca-sonarcloud-snyk-repo.git',
                     goals: 'clean install -U',
                     deployerId: "MAVEN_DEPLOYER",
                     resolverId: "MAVEN_RESOLVER"
