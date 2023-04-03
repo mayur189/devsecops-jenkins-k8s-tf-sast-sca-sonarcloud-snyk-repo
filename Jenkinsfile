@@ -14,7 +14,7 @@ pipeline {
         stage ('Artifactory configuration') {
             steps {
                 rtServer (
-                    id: "ARTIFACTORY_SERVER",
+                    serverId: "ARTIFACTORY_SERVER",
                     url: 'http://mayursecurityclass.jfrog.io/artifactory',
                     credentialsId: CREDENTIALS
                 )
