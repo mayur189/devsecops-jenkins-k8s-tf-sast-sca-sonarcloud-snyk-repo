@@ -7,7 +7,7 @@ pipeline {
      stages {
         stage ('Clone') {
             steps {
-                git branch: 'master', url: "https://github.com/jfrog/project-examples.git"
+                git branch: 'master', url: "https://github.com/mayur189/devsecops-jenkins-k8s-tf-sast-sca-sonarcloud-snyk-repo.git"
             }
         }
 
